@@ -1,0 +1,15 @@
+Docker Commands
+
+                           //base file                                                           //force rebuild img
+- sudo docker-compose -f docker-compose.yaml -f docker-compose.dev.yaml up --build
+
+-sudo docker exec -it <cont> bash //get in the cont
+
+-sudo docker exec -it <cont> mong -u "" -p "" //log in mongo cont
+
+-sudo docker volume prune //remove unused volumes
+
+-sudo docker volume ls //list all volues
+
+- sudo docker-compose -f docker-compose.yaml -f docker-compose.dev.yaml up -d --no-deps express-app
+//does not start the dependency service

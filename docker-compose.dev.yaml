@@ -10,4 +10,6 @@ services:
             - /app/node_modules
         environment:
             - NODE_ENV=development    
+            - MONGO_USER=inyuusha
+            - MONGO_PASSWORD=mypass
         command: npm run dev    
