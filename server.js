@@ -19,6 +19,8 @@ mongoose.connect(mongoUrl,{useUnifiedTopology:true,useNewUrlParser:true})
 .then(()=>console.log("Server connected to database"))
 .catch((err)=>console.log(e))
 
+app.enable("trust proxy")
+
 app.use(session({
     store:new redisStore({client:redisClient}),
     secret:SESSION_SECRET,
@@ -35,8 +37,9 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
 //routes
-app.get('/',(req,res)=>{
-    res.send("<h2>Hello World111</h2>")
+app.get('/api/v1',(req,res)=>{
+    res.send("<h2>Hello World111</h2>");
+    console.log("yeah working")
 })
 app.use("/api/v1/post",postRouter);
 app.use("/api/v1/user",userRouter);

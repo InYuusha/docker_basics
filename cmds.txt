@@ -13,3 +13,8 @@ Docker Commands
 
 - sudo docker-compose -f docker-compose.yaml -f docker-compose.dev.yaml up -d --no-deps express-app
 //does not start the dependency service
+
+-sudo docker-compose -f docker-compose.yaml -f docker-compose.dev.yaml -d --scale express-app=2
+//run multiple instances
+
+-sudo docker logs <cont> -f  //(-f for follow along)
