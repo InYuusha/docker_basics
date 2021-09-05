@@ -1,5 +1,12 @@
 Docker Commands
 
+docker ps                             // list all running containers
+docker ps -a                          //list all containers
+docker images                         // shows all images
+docker build -t <name of image> .     // build images from dockerfile
+
+
+
                            //base file                                                           //force rebuild img
 - sudo docker-compose -f docker-compose.yaml -f docker-compose.dev.yaml up --build
 
